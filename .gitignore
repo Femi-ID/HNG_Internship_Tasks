@@ -1,0 +1,4 @@
+db.sqlite3
+manage.py
+hng_task_1/__pycache__/
+hng_tasks/__pycache__/
