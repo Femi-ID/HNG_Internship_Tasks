@@ -12,8 +12,8 @@ def get_info(request):
 
     # get current day and time
     current_day = datetime.now().strftime('%A')
-    utc_time = datetime.now()
-    utc_localize = pytz.utc.localize(utc_time)
+    utc_time = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    # utc_localize = pytz.utc.localize(utc_time)
 
     # github repo and file url
     github_repo_url = "https://github.com/Femi-ID/HNG_Internship_Tasks"
@@ -22,7 +22,7 @@ def get_info(request):
     data = {
         "slack_name": slack_name,
         "current_day": current_day,
-        "utc_time": utc_localize,
+        "utc_time": utc_time,
         "track": track,
         "github_file_url": github_file_url,
         "github_repo_url": github_repo_url,
